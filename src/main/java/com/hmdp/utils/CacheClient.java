@@ -5,8 +5,8 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.hmdp.entity.Shop;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.ExecutorService;
@@ -14,6 +14,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
+@Component
 public class CacheClient {
 
     private final StringRedisTemplate stringRedisTemplate;
